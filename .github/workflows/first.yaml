@@ -6,4 +6,4 @@ jobs:
   file_diff:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello!!!"
+      - run: git status
