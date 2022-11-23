@@ -9,5 +9,6 @@ jobs:
     steps:
       - run: ls -alFR
       - uses: actions/checkout@v3
+      - run: cd .github
       - run: ls -alFR
       - run: echo really
