@@ -1,9 +1,14 @@
 name: file-diff workflow
-on:
-  pull_request:
-    types: [opened, reopened]
+# on:
+#   pull_request:
+#     types: [opened, reopened]
+on: push
 jobs:
   file_diff:
     runs-on: ubuntu-latest
     steps:
-      - run: ll -alFR
+      - run: ls -alFR
+      - uses: actions/checkout@v3
+      - run: cd .github; git status
+      - run: ls -alFR
+      - run: echo really
